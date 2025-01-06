@@ -35,7 +35,7 @@ export class UserRegisterComponent implements OnInit {
   createRegistrationForm() {
     this.registrationForm = this.formBuilder.group(
       {
-        usersellRent: ['felix', [Validators.required]],
+        userName: ['felix', [Validators.required]],
         email: ['f@gmail.com', [Validators.required, Validators.email]],
         password: ['123456', [Validators.required, Validators.minLength(6)]],
         confirmPassword: ['123456', [Validators.required]],
@@ -64,8 +64,8 @@ export class UserRegisterComponent implements OnInit {
       : { notMatched: true };
   }
 
-  get usersellRent() {
-    return this.registrationForm.get('usersellRent') as FormControl;
+  get userName() {
+    return this.registrationForm.get('userName') as FormControl;
   }
 
   get email() {
@@ -102,7 +102,7 @@ export class UserRegisterComponent implements OnInit {
 
   userData(): User {
     return (this.user = {
-      usersellRent: this.usersellRent.value,
+      userName: this.userName.value,
       email: this.email.value,
       mobile: this.mobile.value,
       password: this.password.value,

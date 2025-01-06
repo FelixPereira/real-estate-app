@@ -5,18 +5,18 @@
       <div class="card-body">
         <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
           <div class="form-group col-12">
-            <label for="sellRent">sellRent</label>
+            <label for="name">Name</label>
             <input
               [value]="'felix'"
               class="form-control"
-              sellRent="usersellRent"
+              name="userName"
               required
               ngModel
             />
           </div>
           <div class="form-group col-12">
             <label for="password">Password</label>
-            <input class="form-control" sellRent="password" required ngModel />
+            <input class="form-control" name="password" required ngModel />
           </div>
 
           <div class="form-group col-12">

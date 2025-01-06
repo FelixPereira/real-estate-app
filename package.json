@@ -1,5 +1,5 @@
 {
-  "sellRent": "realstate",
+  "name": "realstate",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

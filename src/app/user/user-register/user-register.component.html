@@ -6,19 +6,16 @@
         <div class="card-body">
           <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
             <div class="form-group col-12">
-              <label for="sellRent">sellRent</label>
+              <label for="userName">Name</label>
               <input
                 type="text"
                 class="form-control"
-                formControlsellRent="usersellRent"
+                formControlName="userName"
               />
               <span
                 class="error-block"
-                *ngIf="
-                  !usersellRent?.valid &&
-                  (usersellRent?.touched || userSubmited)
-                "
-                >Please provide usersellRent</span
+                *ngIf="!userName?.valid && (userName?.touched || userSubmited)"
+                >Please provide userName</span
               >
             </div>
             <div class="form-group col-12">
@@ -26,7 +23,7 @@
               <input
                 type="email"
                 class="form-control"
-                formControlsellRent="email"
+                formControlName="email"
               />
               <span
                 class="error-block"
@@ -46,7 +43,7 @@
               <input
                 type="password"
                 class="form-control"
-                formControlsellRent="password"
+                formControlName="password"
               />
               <span
                 class="error-block"
@@ -67,7 +64,7 @@
               <input
                 type="password"
                 class="form-control"
-                formControlsellRent="confirmPassword"
+                formControlName="confirmPassword"
               />
               <span
                 class="error-block"
@@ -91,7 +88,7 @@
               <input
                 type="text"
                 class="form-control"
-                formControlsellRent="mobile"
+                formControlName="mobile"
               />
               <span
                 class="error-block"

@@ -23,7 +23,7 @@ export class UserLoginComponent implements OnInit {
 
     if (token) {
       this.alertify.success('You are logged in');
-      localStorage.setItem('token', token.usersellRent);
+      localStorage.setItem('token', token.user);
       this.router.navigate(['/']);
       loginForm.reset();
     } else {

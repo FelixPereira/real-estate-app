@@ -53,7 +53,7 @@
                       class="btn btn-outline-primary"
                       [btnRadio]="bhk.toString()"
                       role="button"
-                      sellRent="sellRent"
+                      name="sellRent"
                     >
                       {{ bhk }}
                     </label>
@@ -90,7 +90,7 @@
                       class="btn btn-outline-primary"
                       [btnRadio]="furnishType"
                       role="button"
-                      sellRent="furnishType"
+                      name="furnishType"
                     >
                       {{ furnishType }}
                     </label>
@@ -101,7 +101,7 @@
                   <input
                     required=""
                     ngModel
-                    #propsellRent="ngModel"
+                    #propName="ngModel"
                     type="text"
                     class="form-control"
                     name="name"
@@ -110,7 +110,7 @@
                     [(ngModel)]="propertyView.sellRent"
                   />
                   <span
-                    *ngIf="!propsellRent.valid && propsellRent.touched"
+                    *ngIf="!propName.valid && propName.touched"
                     class="error-block"
                     >Please provide sellRent</span
                   >
@@ -240,7 +240,7 @@
                       class="btn btn-outline-primary"
                       [btnRadio]="rtm"
                       role="button"
-                      sellRent="RTM"
+                      name="RTM"
                     >
                       {{ rtm }}
                     </label>
@@ -274,7 +274,7 @@
                       class="btn btn-outline-primary"
                       [btnRadio]="gc"
                       role="button"
-                      sellRent="GC"
+                      name="GC"
                     >
                       {{ gc }}
                     </label>
@@ -288,7 +288,7 @@
                       class="btn btn-outline-primary"
                       [btnRadio]="me"
                       role="button"
-                      sellRent="ME"
+                      name="ME"
                     >
                       {{ me }}
                     </label>

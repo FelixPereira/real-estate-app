@@ -17,7 +17,7 @@ export class AuthService {
 
     return UsersArray.find(
       (p: any) =>
-        p.usersellRent === user.usersellRent && p.password === user.password
+        p.userName === user.userName && p.password === user.password
     );
   }
 
