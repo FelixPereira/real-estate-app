@@ -1,0 +1,119 @@
+<div class="row">
+  <div>
+    <div class="col-6 m-auto">
+      <div class="card m-auto">
+        <div class="card-header">Register</div>
+        <div class="card-body">
+          <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+            <div class="form-group col-12">
+              <label for="sellRent">sellRent</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlsellRent="usersellRent"
+              />
+              <span
+                class="error-block"
+                *ngIf="
+                  !usersellRent?.valid &&
+                  (usersellRent?.touched || userSubmited)
+                "
+                >Please provide usersellRent</span
+              >
+            </div>
+            <div class="form-group col-12">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                formControlsellRent="email"
+              />
+              <span
+                class="error-block"
+                *ngIf="
+                  email.hasError('required') && (email?.touched || userSubmited)
+                "
+                >Email is required</span
+              >
+              <span
+                class="error-block"
+                *ngIf="!email.hasError('required') && !email?.valid"
+                >Please provide a valid email</span
+              >
+            </div>
+            <div class="form-group col-12">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                formControlsellRent="password"
+              />
+              <span
+                class="error-block"
+                *ngIf="
+                  password.hasError('required') &&
+                  (password?.touched || userSubmited)
+                "
+                >Password is required</span
+              >
+              <span
+                class="error-block"
+                *ngIf="!password.hasError('required') && !password?.valid"
+                >Please provide a valid password</span
+              >
+            </div>
+            <div class="form-group col-12">
+              <label for="password">Confirm Password</label>
+              <input
+                type="password"
+                class="form-control"
+                formControlsellRent="confirmPassword"
+              />
+              <span
+                class="error-block"
+                *ngIf="
+                  !confirmPassword?.valid &&
+                  (confirmPassword?.touched || userSubmited)
+                "
+                >Please, confirm password</span
+              >
+              <span
+                class="error-block"
+                *ngIf="
+                  registrationForm.hasError('notMatched') &&
+                  confirmPassword?.valid
+                "
+                >Password not match</span
+              >
+            </div>
+            <div class="form-group col-12">
+              <label for="mobile">Mobile</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlsellRent="mobile"
+              />
+              <span
+                class="error-block"
+                *ngIf="
+                  mobile.hasError('required') &&
+                  (mobile?.touched || userSubmited)
+                "
+                >Mobile is required</span
+              >
+              <span
+                class="error-block"
+                *ngIf="!mobile.hasError('required') && !mobile?.valid"
+                >Please provide a valid mobile</span
+              >
+            </div>
+            <div class="form-group col-12">
+              <button type="submit" class="btn btn-primary mr-2">Save</button>
+              <button type="reset" class="btn btn-danger">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
